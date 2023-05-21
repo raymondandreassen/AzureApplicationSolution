@@ -16,7 +16,14 @@
 ## Setup
 ### Git stuff
 Default .gitignore file for terraform
-
-
-
 ### Folders
+
+
+## Design, pr resource groups
+1. Backend-Logging
+    1. Log Analytics
+    1. Application Insights
+    1. And anything releated to logging
+1. Backend-Network
+    1. vNet
+    1. 
