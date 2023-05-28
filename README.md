@@ -26,7 +26,7 @@ Default .gitignore file for terraform. Avoid:
     1. And anything releated to logging
 1. Backend-Network
     1. vNet
-    1. 
+    1. DNS => [Azure Provided DNS](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat)
 
 ## Secrets
 ### credentials.tfvars

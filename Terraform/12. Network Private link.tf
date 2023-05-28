@@ -1,8 +1,8 @@
-# #
-# # NETTVERKS PRIVATE LINK 
-# #
+#
+# NETTVERKS PRIVATE LINK 
+#
 
-# # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_link_service
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_link_service
 
 # resource "azurerm_private_link_service" "vnet_privatelink" {
 #   name                      = "${local.tag_appName}-privatelink"
@@ -10,7 +10,7 @@
 #   location                  = local.resource_location
 #   tags                      = { tfVer = "2023-05-27" }
 
-#   load_balancer_frontend_ip_configuration_ids = [  ]        // azurerm_lb.example.frontend_ip_configuration.0.id]
+#   load_balancer_frontend_ip_configuration_ids = [ azurerm_public_ip.application_gateway_vnet_public_ip.id ]        // azurerm_lb.example.frontend_ip_configuration.0.id]
 
 #   #auto_approval_subscription_ids              = local.network_allowedsubid  // NONE = ALL 
 #   #visibility_subscription_ids                 = local.network_visiblesubid  // NONE = ALL
