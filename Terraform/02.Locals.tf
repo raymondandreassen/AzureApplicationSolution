@@ -32,8 +32,9 @@ locals {
   vNet_SubnetGateway              = ["10.200.200.224/28"]    // 224-239     16 addresses
   vNet_SubnetAppGateway           = ["10.200.200.240/28"]    // 240-256     16 addresses
 
-  privateLinkIp1                  = "10.200.200.160"
-  privateLinkIp2                  = "10.200.200.161"
+  #privateLinkIp1                  = "10.200.200.160"
+  #privateLinkIp2                  = "10.200.200.161"
+
 
   # network_firewall_ip             = "172.17.1.4"
   # network_dc_subnet               = "172.17.8.0/26"
@@ -48,8 +49,6 @@ locals {
 
   # eventgridId                     = "/subscriptions/f9d02df7-d106-49a0-867b-6e4f8f258a15/resourceGroups/p-gov-cng/providers/Microsoft.Web/sites/p-gov-cng75bg5lbco7-func/functions/event_AzureActivitiesSink"
   # eventgrid_resourceid            = "/subscriptions/43c28f9e-9606-4f3a-8c1f-d97b98a6642d"
-
-
 
   tags_global = { 
       App           = local.tag_appName

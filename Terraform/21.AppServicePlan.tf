@@ -1,29 +1,28 @@
 
 
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan
 
 
-resource "azurerm_service_plan" "appserviceplan_dev" {
-  name                = "AppServiceplan-Dev"
-  location            = local.resource_location
-  resource_group_name = azurerm_resource_group.Backend-Resources.name
-  os_type             = "Linux"
-  sku_name            = "SHARED"
-}
+locals {    
+    plattform              = "Windows"     // Windows, Linux
+}     
 
 resource "azurerm_service_plan" "appserviceplan_basic_1" {
-  name                = "AppServiceplan-Basic"
-  location            = local.resource_location
-  resource_group_name = azurerm_resource_group.Backend-Resources.name
-  os_type             = "Linux"
-  sku_name            = "B1"
+  name                    = "AppServiceplan-Basic-${local.plattform}"
+  location                = local.resource_location
+  resource_group_name     = azurerm_resource_group.Backend-Resources.name
+  os_type                 = local.plattform
+  sku_name                = "B1"
+  tags                   = { tfVer = "2023-05-29" }
 }
 
 resource "azurerm_service_plan" "appserviceplan_standard_1" {
-  name                = "AppServiceplan-Standard"
-  location            = local.resource_location
-  resource_group_name = azurerm_resource_group.Backend-Resources.name
-  os_type             = "Linux"
-  sku_name            = "S1"
+  name                    = "AppServiceplan-Standard-${local.plattform}"
+  location                = local.resource_location
+  resource_group_name     = azurerm_resource_group.Backend-Resources.name
+  os_type                 = local.plattform
+  sku_name                = "S1"
+  tags                   = { tfVer = "2023-05-29" }
 }
 
 # sku_name - (Required) The SKU for the plan. Possible values include 

@@ -36,3 +36,8 @@ variable "sql_administrator_password" {
     sensitive = true
 }
 
+variable "privatednszone" {
+    type = string
+    description = "DataCenter private DNS zone name."
+}
+
